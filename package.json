@@ -1,0 +1,26 @@
+{
+  "name": "document-staging",
+  "version": "1.0.0",
+  "description": "Plan execution relative to document lifecycle",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovanderzee/document-staging.git"
+  },
+  "keywords": [
+    "plan",
+    "execution",
+    "stage",
+    "execution",
+    "front-end"
+  ],
+  "author": "Onno van der Zee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ovanderzee/document-staging/issues"
+  },
+  "homepage": "https://github.com/ovanderzee/document-staging#readme"
+}
