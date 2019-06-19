@@ -4,17 +4,15 @@
   "description": "Plan execution relative to document lifecycle",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ovanderzee/document-staging.git"
   },
   "keywords": [
-    "plan",
-    "execution",
-    "stage",
-    "execution",
+    "plan execution",
+    "stage execution",
     "front-end"
   ],
   "author": "Onno van der Zee",
