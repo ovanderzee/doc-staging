@@ -1,9 +1,10 @@
 {
   "name": "document-staging",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Plan execution relative to document lifecycle",
   "main": "dist/index.js",
   "scripts": {
+    "build": "clear-folder dist && rollup --config",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -20,5 +21,20 @@
   "bugs": {
     "url": "https://github.com/ovanderzee/document-staging/issues"
   },
-  "homepage": "https://github.com/ovanderzee/document-staging#readme"
+  "homepage": "https://github.com/ovanderzee/document-staging#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "clear-folder": "^1.1.2",
+    "core-js": "^3.1.4",
+    "rollup": "^1.15.6",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup-plugin-terser": "^5.0.0"
+  }
 }

@@ -1,0 +1,2 @@
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):(e=e||self).documentStaging=n()}(this,function(){"use strict";return{onInteractive:function(e){"loading"===document.readyState?window.addEventListener("DOMContentLoaded",function(n){e()}):e()},onComplete:function(e){"complete"===document.readyState?e():window.addEventListener("load",function(n){e()})}}});
+//# sourceMappingURL=index.js.map
