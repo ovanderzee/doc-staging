@@ -24,7 +24,7 @@ Note that jQuery's $(document).ready() also works when called after the ready ev
 After DOMContentLoaded, artefacts like stylesheets, images, are still loading. 
 The moment all artefacts are there, the window object fires the load event.
 The same time the readyState of the document changes to 'complete'. 
-From then on you could interact with stylesheets.
+From then on you could interact with stylesheets, or the dimensions of images.
 
 To aim for execution at load time:
 
