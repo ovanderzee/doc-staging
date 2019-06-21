@@ -1,8 +1,9 @@
 {
   "name": "document-staging",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Plan execution relative to document lifecycle",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "build": "clear-folder dist && rollup --config",
     "test": "echo \"Error: no test specified\" && exit 0"
