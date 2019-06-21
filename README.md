@@ -3,8 +3,9 @@
 Plan execution relative to document lifecycle
 
 When you couldn't be sure when your script loads, you still want it to load asap.
-With this module you could stage your functionality for execution in DOMContentLoaded or the load event.
-When these events have passed, you function could be executed right away. 
+With this module you could stage your functionality for execution in the document. 
+The DOMContentLoaded or the load event can be used, 
+or when these events have passed, your function could be executed right away. 
 
 ## Usage
 
@@ -15,9 +16,7 @@ From then on the HTML elements can be scripted.
 To aim for execution at DOMContentLoaded:
 
 	documentStaging.onInteractive ( functionReference )
-	documentStaging.onInteractive ( () => {
-		...
-	} )
+	documentStaging.onInteractive ( [ functionRef1, functionRef2 ] )
 
 Note that jQuery's $(document).ready() also works when called after the ready event passed.
 
@@ -29,7 +28,5 @@ From then on you could interact with stylesheets, or the dimensions of images.
 To aim for execution at load time:
 
 	documentStaging.onComplete ( functionReference )
-	documentStaging.onComplete ( () => {
-		...
-	} )
+	documentStaging.onComplete ( [ functionRef1, functionRef2 ] )
 

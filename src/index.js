@@ -3,28 +3,35 @@
 
 var documentStaging = (function () {
 
-	var onInteractive = function ( task ) {
+	let executeTasks = ( tasks ) => {
+		 if ( !( tasks instanceof Array ) ){
+		 	tasks = [tasks]
+		 }
+		tasks.forEach ( task => task() )
+	}
+
+	const onInteractive = function ( tasks ) {
 		// wait for event
 		if ( document.readyState === "loading" ) {
 			window.addEventListener('DOMContentLoaded', function (event) {
-				task()
+				executeTasks ( tasks )
 			})
 		}
 		// execute right away
 		else {
-			task()
+			executeTasks ( tasks )
 		}
 	}
 
-	var onComplete = function ( task ) {
+	const onComplete = function ( tasks ) {
 		// execute right away
 		if ( document.readyState === "complete" ) {
-			task()
+			executeTasks ( tasks )
 		}
 		// wait for event
 		else {
 			window.addEventListener('load', function (event) {
-				task()
+				executeTasks ( tasks )
 			})
 		}
 	}
