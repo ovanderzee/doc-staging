@@ -1,6 +1,6 @@
 {
   "name": "document-staging",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Plan execution relative to document lifecycle",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
