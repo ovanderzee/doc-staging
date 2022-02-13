@@ -1,10 +1,10 @@
 
 
 
-var documentStaging = (function () {
+const documentStaging = (function () {
 
-	let executeTasks = ( tasks ) => {
-		 if ( !( tasks instanceof Array ) ){
+	const executeTasks = ( tasks ) => {
+		 if ( !Array.isArray(tasks) ){
 		 	tasks = [tasks]
 		 }
 		tasks.forEach ( task => task() )
