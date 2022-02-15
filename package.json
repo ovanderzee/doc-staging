@@ -4,6 +4,7 @@
   "description": "Plan execution relative to document lifecycle",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "build": "cf dist && rollup --config",
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -35,6 +36,7 @@
     "clear-folder": "^4.0.0",
     "core-js": "^3.21.0",
     "rollup": "^2.67.2",
+    "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.5.5"
   }
