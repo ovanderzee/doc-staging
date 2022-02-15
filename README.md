@@ -33,3 +33,7 @@ To aim for execution at load time:
 documentStaging.onComplete ( functionReference )
 documentStaging.onComplete ( [ functionRef1, functionRef2 ] )
 ```
+
+## Demo
+
+Static demo page included: /demo/document-staging.html

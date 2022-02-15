@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let counter = 0
+        function logMessage (msg) {
+            console.log(`${msg} (${++counter}), with state: ${document.readyState}`)
+        }
+
+        logMessage('The Begin')
+    </script>
+    <script src="../dist/index.js"></script>
+    <script>
+        documentStaging.onComplete(
+            () => logMessage('onComplete')
+        )
+        documentStaging.onInteractive(
+            () => logMessage('onInteractive')
+        )
+
+        logMessage('The End')
+    </script>
+</head>
+<body>
+    Compare the scripting on this page to the console output.
+</body>
+</html>
