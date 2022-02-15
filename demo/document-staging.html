@@ -2,23 +2,25 @@
 <html>
 <head>
     <script>
-        let counter = 0
-        function logMessage (msg) {
-            console.log(`${msg} (${++counter}), with state: ${document.readyState}`)
+        let exec = 0
+
+        function logMessage (msg, issue) {
+            const m = `${msg}: iss. #${issue}, exec. #${++exec}, while: ${document.readyState}`
+            console.log(m)
         }
 
-        logMessage('The Begin')
+        logMessage('The Begin', 1)
     </script>
     <script src="../dist/index.js"></script>
     <script>
         documentStaging.onComplete(
-            () => logMessage('onComplete')
+            () => logMessage('onComplete', 2)
         )
         documentStaging.onInteractive(
-            () => logMessage('onInteractive')
+            () => logMessage('onInteractive', 3)
         )
 
-        logMessage('The End')
+        logMessage('The End', 4)
     </script>
 </head>
 <body>

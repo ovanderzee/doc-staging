@@ -4,3 +4,4 @@ node_modules
 src
 *.map
 *.config.js
+tsconfig.json
