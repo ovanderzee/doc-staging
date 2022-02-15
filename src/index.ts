@@ -1,19 +1,17 @@
 
+const documentStaging = ( () => {
 
-
-const documentStaging = (function () {
-
-	const executeTasks = ( tasks ) => {
-		 if ( !Array.isArray(tasks) ){
-		 	tasks = [tasks]
-		 }
+	const executeTasks = ( tasks: Function | Function[] ): any => {
+		if ( !Array.isArray(tasks) ) {
+			tasks = [tasks]
+		}
 		tasks.forEach ( task => task() )
 	}
 
-	const onInteractive = function ( tasks ) {
+	const onInteractive = ( tasks: Function | Function[] ): any => {
 		// wait for event
 		if ( document.readyState === "loading" ) {
-			window.addEventListener('DOMContentLoaded', function (event) {
+			window.addEventListener('DOMContentLoaded', (event: Event) => {
 				executeTasks ( tasks )
 			})
 		}
@@ -23,14 +21,14 @@ const documentStaging = (function () {
 		}
 	}
 
-	const onComplete = function ( tasks ) {
+	const onComplete = ( tasks: Function | Function[] ): any => {
 		// execute right away
 		if ( document.readyState === "complete" ) {
 			executeTasks ( tasks )
 		}
 		// wait for event
 		else {
-			window.addEventListener('load', function (event) {
+			window.addEventListener('load', (event: Event) => {
 				executeTasks ( tasks )
 			})
 		}
