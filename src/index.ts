@@ -8,12 +8,14 @@ const documentStaging = ( () => {
 		tasks.forEach ( task => task() )
 	}
 
+	const handlerOptions = { once: true }
+
 	const onInteractive = ( tasks: Function | Function[] ): any => {
 		// wait for event
 		if ( document.readyState === "loading" ) {
-			window.addEventListener('DOMContentLoaded', (event: Event) => {
+			window.addEventListener('DOMContentLoaded', () => {
 				executeTasks ( tasks )
-			})
+			}, handlerOptions)
 		}
 		// execute right away
 		else {
@@ -28,9 +30,9 @@ const documentStaging = ( () => {
 		}
 		// wait for event
 		else {
-			window.addEventListener('load', (event: Event) => {
+			window.addEventListener('load', () => {
 				executeTasks ( tasks )
-			})
+			}, handlerOptions)
 		}
 	}
 
