@@ -1,7 +1,5 @@
-// rollup.config.js
-import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser'
-import dts from 'rollup-plugin-dts';
+import dts from 'rollup-plugin-dts'
+import esbuild from 'rollup-plugin-esbuild'
 
 const name = "documentStaging";
 
@@ -19,8 +17,7 @@ export default [{
     sourcemap: true,
   }],
   plugins: [
-    typescript(),
-    terser(),
+    esbuild()
   ]
 }, {
   input: "src/index.ts",

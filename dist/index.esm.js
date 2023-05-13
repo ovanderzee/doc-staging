@@ -1,2 +1,34 @@
-const e=(()=>{const e=e=>{Array.isArray(e)||(e=[e]),e.forEach((e=>e()))},t={once:!0};return{onInteractive:n=>{"loading"===document.readyState?window.addEventListener("DOMContentLoaded",(()=>{e(n)}),t):e(n)},onComplete:n=>{"complete"===document.readyState?e(n):window.addEventListener("load",(()=>{e(n)}),t)}}})();export{e as default};
+const documentStaging = (() => {
+  const executeTasks = (tasks) => {
+    if (!Array.isArray(tasks)) {
+      tasks = [tasks];
+    }
+    tasks.forEach((task) => task());
+  };
+  const handlerOptions = { once: true };
+  const onInteractive = (tasks) => {
+    if (document.readyState === "loading") {
+      window.addEventListener("DOMContentLoaded", () => {
+        executeTasks(tasks);
+      }, handlerOptions);
+    } else {
+      executeTasks(tasks);
+    }
+  };
+  const onComplete = (tasks) => {
+    if (document.readyState === "complete") {
+      executeTasks(tasks);
+    } else {
+      window.addEventListener("load", () => {
+        executeTasks(tasks);
+      }, handlerOptions);
+    }
+  };
+  return {
+    onInteractive,
+    onComplete
+  };
+})();
+
+export { documentStaging as default };
 //# sourceMappingURL=index.esm.js.map
