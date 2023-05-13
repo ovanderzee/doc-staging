@@ -7,7 +7,8 @@
   "type": "module",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "cf dist && rollup --config",
+    "prebuild": "cf dist types && prettier './src/*.ts' --write",
+    "build": "rollup --config",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -15,6 +16,7 @@
     "url": "git+https://github.com/ovanderzee/document-staging.git"
   },
   "keywords": [
+    "event staging",
     "plan execution",
     "stage execution",
     "front-end"
